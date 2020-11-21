@@ -56,17 +56,21 @@ function showSymbol(arg){
         interactiveDisplay = '';
         staticDisplayEl.innerHTML = '';
     } else {
-        interactiveDisplay += arg
+        interactiveDisplay += arg;
     }
     mainLineEl.innerHTML = interactiveDisplay;
 }
 
 function countInsideBraces(str){
-    const start = str.indexOf('(') + 1;
+    const start = str.indexOf('(');
     const end = str.lastIndexOf(')');
-    const betweenBraces = str.slice(start, end);
+    const betweenBraces = str.slice(start + 1, end);
     let res = customEval(betweenBraces.join(' '));
-    str.splice(start, betweenBraces.length + 1, res)
+    const len = betweenBraces.length + 2;
+    console.log(res, 'this is res')
+    console.log(str)
+    str.splice(start, len, res);
+    console.log(str);
     return str;
 }
 
@@ -77,6 +81,7 @@ function customEval(str) {
     countInsideBraces(str);
     if (str.length === 1){
     return str[0];
+        }
     }
 
   if (str.includes('x') || str.includes('/')){
@@ -89,7 +94,7 @@ function customEval(str) {
   if (str.length === 1){
     return str[0];
     }
-  }
+}
 
 function MultiDivide(str) {
     
@@ -121,8 +126,7 @@ function plusMinus(str){
           str.splice(i-1, 3, res)
           i-=1;
         }
-    }
-    
+    } 
     return str;
   }
 
@@ -178,10 +182,10 @@ for(let i of numbersButtonEl){
                 showSymbol(" x ");
                 break;
             case 'frontBrace':
-                showSymbol(" ( ");
+                showSymbol("( ");
                 break;
             case 'backBrace':
-                showSymbol(" ) ");
+                showSymbol(" )");
                 break;
             case "minus":
                 addMinus();
