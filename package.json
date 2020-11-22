@@ -25,5 +25,8 @@
     "gulp-css": "^0.1.0",
     "gulp-csso": "^4.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "standart": "^6.1.0"
   }
 }

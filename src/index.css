@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'digital-7regular';
-    src: url('/font/digital-7-webfont.woff2') format('woff2'),
-         url('/font/digital-7-webfont.woff') format('woff');
+    src: url('fonts/digital-7-webfont.woff2') format('woff2'),
+         url('fonts/digital-7-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -32,6 +32,8 @@
     border-radius: 20px;
     background-color: #00867b;
     font-family: 'digital-7regular';
+    font-size: 35px;
+
 }
 
 .static-display {
@@ -41,6 +43,7 @@
     flex-flow: column;
     overflow: auto;
     padding-right: 5px;
+    
 }
 .static-display span{
     text-align: end;
@@ -81,7 +84,7 @@ button {
     user-select: none;
     outline: none;
     border: 1px solid rgb(250,172,17);
-    border-radius: 7px;
+    border-radius: 5px;
     background: rgb(255,212,3) linear-gradient(rgb(255,212,3), rgb(248,157,23));
     box-shadow: inset 0 -2px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,0);
     transition: box-shadow .2s, border-color .2s;
