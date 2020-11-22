@@ -22,7 +22,9 @@
     width: 500px;
     border-radius: 20px;
     background-color: #251a10;
-    box-shadow: 0 0 10px 2px #3333331A;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
 }
 
 .display {
@@ -67,6 +69,7 @@
     padding-left: 15px;
     margin-top: 10px;
     background-color: #54381d;
+    padding-bottom: 5px;
 }
 
 .operations {
@@ -80,24 +83,22 @@ button {
     width: 60px;
     margin: 4px;
     font-size: 30px;
-    text-decoration: none;
-    user-select: none;
     outline: none;
-    border: 1px solid rgb(250,172,17);
     border-radius: 5px;
-    background: rgb(255,212,3) linear-gradient(rgb(255,212,3), rgb(248,157,23));
-    box-shadow: inset 0 -2px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,0);
+    background-color: #ff9900;
+    box-shadow: 2px 2px #a16102;
     transition: box-shadow .2s, border-color .2s;
     cursor: pointer;
 } 
 
 button:hover {
-  box-shadow: inset 0 -1px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,.5);
+    background-color: #fcad36;
 }
 
 button:active {
-  border-color: rgba(177,159,0,1);
-  box-shadow: inset 0 -1px 1px rgba(0,0,0,.1), inset 0 1px 2px rgba(0,0,0,.3), inset 0 0 0 60px rgba(255,255,0,.45);
+    background-color: #ff9900;
+    box-shadow: 0 1px #a16102;
+    transform: translateY(5px);
 }
 
 #equally {
