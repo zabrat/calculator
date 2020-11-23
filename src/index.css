@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('fonts/digital-7-webfont.woff2') format('woff2'),
+         url('fonts/digital-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    
+    
+}
+
+.calculator {
+    height: 390px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #251a10;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+.display {
+    height: 150px;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #00867b;
+    font-family: 'digital-7regular';
+    font-size: 35px;
+
+}
+
+.static-display {
+    border-bottom: 2px solid black;;
+    height: 100px;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    padding-right: 5px;
+    
+}
+.static-display span{
+    text-align: end;
+}
+
+.interactive-display {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.buttons {
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    padding-left: 15px;
+    margin-top: 10px;
+    background-color: #54381d;
+    padding-bottom: 5px;
+}
+
+.operations {
+    width: 50%;
+}
+.numbers {
+    width: 50%;
+}
+button {
+    height: 40px;
+    width: 60px;
+    margin: 4px;
+    font-size: 30px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ff9900;
+    box-shadow: 2px 2px #a16102;
+    transition: box-shadow .2s, border-color .2s;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #fcad36;
+}
+
+button:active {
+    background-color: #ff9900;
+    box-shadow: 0 1px #a16102;
+    transform: translateY(5px);
+}
+
+#equally {
+    width: 135px;
+}
